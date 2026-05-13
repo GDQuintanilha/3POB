@@ -1,13 +1,25 @@
 public class Funcionario {
-    protected String nome;
-    protected double salario;
+    private String cpf;
+    private double salario;
 
-    public Funcionario(String nome, double salario) {
-        this.nome = nome;
+    public Funcionario(String cpf, double salario) {
+        this.cpf = cpf;
         this.salario = salario;
     }
 
-    public double calcularBonus() {
-        return this.salario * 0.10;
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 }
