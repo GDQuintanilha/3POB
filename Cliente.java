@@ -1,8 +1,9 @@
-public class Gerente extends Funcionario implements Autenticavel {
+public class Cliente implements Autenticavel {
+    private String nome;
     private String senha;
 
-    public Gerente(String nome, double salario, String senha) {
-        super(nome, salario);
+    public Cliente(String nome, String senha) {
+        this.nome = nome;
         this.senha = senha;
     }
 
