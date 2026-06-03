@@ -1,25 +1,19 @@
-public class Funcionario {
-    private String cpf;
-    private double salario;
+public abstract class Funcionario{
+    private String nome;
+    private double salarioBase;
 
-    public Funcionario(String cpf, double salario) {
-        this.cpf = cpf;
-        this.salario = salario;
+    public Funcionario(String nome, double salarioBase){
+        this.nome = nome;
+        this.salarioBase = salarioBase;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getNome(){
+        return nome;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public double getSalarioBase(){
+        return salarioBase;
     }
 
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
+    public abstract double calcularSalario();
 }
