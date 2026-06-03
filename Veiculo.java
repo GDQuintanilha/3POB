@@ -1,13 +1,22 @@
-public class Veiculo {
-    protected String marca;
-    protected String modelo;
+public abstract class Veiculo{
+    private String placa;
+    private double custoFixo;
 
-    public Veiculo(String marca, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
+    public Veiculo(String placa, double custoFixo){
+        if(placa == null || placa.length() != 7){
+            throw new PlacaInvalidaException("A placa '" + placa + "' é inválida. Deve conter exatamente 7 caracteres.");
+        }
+        this.placa = placa;
+        this.custoFixo = custoFixo;
     }
 
-    public void exibirDados() {
-        System.out.println("Veículo - Marca: " + marca + " | Modelo: " + modelo);
+    public String getPlaca(){
+        return placa;
     }
+
+    public double getCustoFixo(){
+        return custoFixo;
+    }
+
+    public abstract double calcularCustoTotal();
 }
